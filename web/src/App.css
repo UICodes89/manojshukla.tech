@@ -45,14 +45,17 @@ body {
 /*Main section*/
 
 .banner_part {
+    background-image: url('./images/dub_bg.jpg');
     height: 100vh;
     position: relative;
-    background-image: url('./images/manoj.svg');
+    background-image: url(/static/media/dub_bg.a5d651bf.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right bottom;
     z-index: 2;
-    background-color: #0d0f5b;
+    background-color: #ababab;
+    background-position: 51%;
+    background-size: cover;
+    background-blend-mode: multiply;
+    text-align: left;
 }
 
 .banner_part .banner_text .banner_text_iner {
@@ -63,10 +66,8 @@ body {
 .banner_part .banner_text h1 {
     font-size: 80px;
     font-weight: 400;
-    margin-bottom: 65px;
     line-height: 96px;
     color: #fff;
-    margin-top: 35px;
 }
 
 .banner_part .banner_text {
@@ -80,13 +81,14 @@ body {
 /*Header Components*/
 
 .menu_fixed {
-    position: fixed;
+    position: sticky;
     z-index: 9999 !important;
-    width: 100%;
+    width: 20%;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
     top: 0;
-    background-color: #0a0b4d;
-    height: 88px;
+    background-color: #982f2f;
+    height: 100vh;
+    float: left;
 }
 
 .logo {
@@ -100,10 +102,43 @@ body {
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: rgb(255, 255, 255);
+    color: #fff;
+    text-transform: uppercase;
 }
 
 .navbar-nav .nav-link:hover {
-    /* color: rgba(0,0,0,.7); */
     color: #fff !important;
+}
+
+section img.dub_bg {
+    vertical-align: middle;
+    border-style: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 100vh;
+}
+
+section {
+    float: left;
+    width: 80%;
+}
+
+.banner_text_iner p {
+    color: #fff;
+    text-align: left;
+    font-size: 2em;
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+    position: absolute;
+    top: 185px;
+    left: 43%;
 }

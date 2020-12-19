@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
+import dub_bg from "../../images/dub_bg.jpg";
 class MainSectionComponent extends Component {
   render() {
     return(
-        <section class="banner_part">
+        <section class="banner_part dub_bg">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8">
                     <div class="banner_text">
                         <div class="banner_text_iner">
-                            <h1>Welcome, I am Manoj Shukla.</h1>
+                            <h1>Hello, I am Manoj,</h1>
+                            <p>A tech enthusiast, software professional specialized in the back-end, frontend, and data analytics.</p>
                         </div>
                     </div>
                 </div>
