@@ -6,7 +6,7 @@ function Contact() {
         <section id="contact">
             <h1 className="section-header">CONTACT</h1>
             <div className="contact-wrapper">
-                <form className="form-horizontal" role="form" name="contact" method="POST" data-netlify="true">
+                <form className="form-horizontal"  name="contact" method="POST" data-netlify="true">
                     <div className="form-group">
                         <div className="col-sm-12">
                            <div className="row">
@@ -38,16 +38,16 @@ function Contact() {
                     <hr />
                       
                     <ul className="social-media-list">
-                        <li><a href="https://www.facebook.com/mshukla08/ " target="_blank" className="contact-icon">
+                        <li><a href="https://www.facebook.com/mshukla08/ " target="_blank" rel="noopener noreferrer" className="contact-icon">
                         <i className="fa fa-github" aria-hidden="true"></i></a>
                         </li>
-                        <li><a href="https://www.linkedin.com/in/manoj-shukla-77505782/" target="_blank" className="contact-icon">
+                        <li><a href="https://www.linkedin.com/in/manoj-shukla-77505782/" target="_blank" rel="noopener noreferrer" className="contact-icon">
                         <i className="fa fa-linkedin" aria-hidden="true"></i></a>
                         </li>
-                        <li><a href=" https://www.instagram.com/manoj_k_shukla/" target="_blank" className="contact-icon">
+                        <li><a href=" https://www.instagram.com/manoj_k_shukla/" target="_blank" rel="noopener noreferrer" className="contact-icon">
                         <i className="fa fa-instagram" aria-hidden="true"></i></a>
                         </li>
-                        <li><a href="https://github.com/UICodes89" target="_blank" className="contact-icon">
+                        <li><a href="https://github.com/UICodes89" target="_blank" className="contact-icon" rel="noopener noreferrer">
                         <i className="fa fa-git" aria-hidden="true"></i></a>
                         </li>
                     </ul>
