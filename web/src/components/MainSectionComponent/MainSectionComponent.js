@@ -9,7 +9,7 @@ class MainSectionComponent extends Component {
                     <div class="banner_text">
                         <div class="banner_text_iner">
                             <h1>Hello, I am Manoj,</h1>
-                            <p>A tech enthusiast, software professional specialized in the back-end, frontend, and data analytics.</p>
+                            <p>A tech enthusiast, software professional specialized in the back-end, frontend, Cloud(AWS) and data analytics.</p>
                         </div>
                     </div>
                 </div>
