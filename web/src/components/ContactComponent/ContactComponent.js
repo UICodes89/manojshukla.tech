@@ -22,6 +22,8 @@ function Contact() {
                         </div>
                     </div>
                     <textarea className="form-control" rows="10" placeholder="MESSAGE" name="message"></textarea>
+                    <div class="g-recaptcha"
+       data-sitekey="6LegPg0aAAAAAEzUi9qA6yjuii7uli2EltGtlSTc"></div>
                     <button className="btn btn-primary send-button" id="submit" type="submit" value="SEND">
                         <div className="button">
                         <i className="fa fa-paper-plane"></i><span className="send-text">SEND</span>
