@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import logo from "../../images/logo.svg";
-import portfolio from "../../images/manoj.svg";
+import portfolio from "../../images/manoj.jpg";
 import {Link} from 'react-router-dom';
 import  './HeaderComponent.css'
 
@@ -46,6 +46,7 @@ class HeaderComponent extends Component{
                                     <a href="https://www.facebook.com/mshukla08/"><i className="fa fa-facebook-square"></i></a>
                                     <a href="https://www.instagram.com/manoj_k_shukla/"><i className="fa fa-instagram"></i></a>
                                     <a href="https://www.linkedin.com/in/manoj-shukla-77505782/"><i className="fa fa-linkedin"></i></a>
+                                    <a href="https://github.com/UICodes89"><i className="fa fa-git"></i></a>
                                     <a href="https://s3-eu-west-1.amazonaws.com/www.manojshukla.tech/ManojShukla_Fullstack_dublin.docx"><i className="fa fa-file"></i></a>
                                 </div>
                             </div>
