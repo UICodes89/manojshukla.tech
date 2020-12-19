@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import dub_bg from "../../images/dub_bg.jpg";
+import React, { Component } from 'react'
 class MainSectionComponent extends Component {
   render() {
     return(
