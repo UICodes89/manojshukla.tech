@@ -13,7 +13,7 @@ class HeaderComponent extends Component{
                         <div className="col-lg-12">
                             <div className="introduction">
                                 <div className="my_image">
-                                    <img src={portfolio} alt="" className="portfolio"/>
+                                   <a href="/"> <img src={portfolio} alt="" className="portfolio"/></a>
                                 </div>
                                 <div>
                                 <p>FULL STACK DATA SCIENCE <br /> DEVELOPER</p></div>
