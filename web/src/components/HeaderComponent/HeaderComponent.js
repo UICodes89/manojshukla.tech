@@ -41,7 +41,7 @@ class HeaderComponent extends Component{
                                 </div>
                                 
                             </nav>
-                            <div class="social_media">
+                            <div className="social_media">
                                 <div className="social_icon">
                                     <a href="https://www.facebook.com/mshukla08/"><i className="fa fa-facebook-square"></i></a>
                                     <a href="https://www.instagram.com/manoj_k_shukla/"><i className="fa fa-instagram"></i></a>

@@ -1,30 +1,59 @@
-import React from "react";
+import React, {useState} from "react";
 import "./ContactComponent.css";
-function Contact() {
+function Contact(props) {
+    
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    const nameHandler = (event) =>{
+        setName(event.target.value);
+    }
+    const emailHandler = (event) =>{
+        setEmail(event.target.value);
+    }
+    const messageHandler = (event) =>{
+        setMessage(event.target.value);
+    }
+    const encode  =  (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&")
+      }
+    
+    const submiHandler = (event) =>{
+        event.preventDefault();
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", ...{name, email, message} })
+          })
+            .then(() => alert("Success!"))
+            .catch(error => alert(error));
+    }
     return (
        <>
         <section id="contact">
             <h1 className="section-header">CONTACT</h1>
             <div className="contact-wrapper">
-                <form className="form-horizontal"  name="contact" method="POST" data-netlify="true">
+                <form className="form-horizontal"  name="contact" method="POST" data-netlify="true" onSubmit={submiHandler}>
                     <div className="form-group">
                         <div className="col-sm-12">
                            <div className="row">
-                           <input type="text" className="form-control" id="name" placeholder="NAME" name="name" value="" />
+                           <input type="text" className="form-control" id="name" placeholder="NAME" name="name" value={name} onChange={nameHandler} />
                            </div>
                         </div>
                     </div>
                     <div className="form-group">
                         <div className="col-sm-12">
                             <div className="row">
-                            <input type="email" className="form-control" id="email" placeholder="EMAIL" name="email" value="" />
+                            <input type="email" className="form-control" id="email" placeholder="EMAIL" name="email" value="" name="name" value={email} onChange={emailHandler}/>
                             </div>
                         </div>
                     </div>
-                    <textarea className="form-control" rows="10" placeholder="MESSAGE" name="message"></textarea>
-                    <div class="g-recaptcha"
-       data-sitekey="6LegPg0aAAAAAEzUi9qA6yjuii7uli2EltGtlSTc"></div>
-                    <button className="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+                    <textarea className="form-control" rows="10" placeholder="MESSAGE" name="message" value={message} onChange={messageHandler}></textarea>
+                    
+                    <button className="btn btn-primary send-button" id="submit" type="submit" value="SEND" >
                         <div className="button">
                         <i className="fa fa-paper-plane"></i><span className="send-text">SEND</span>
                         </div>
