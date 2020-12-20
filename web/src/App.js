@@ -7,6 +7,7 @@ import {HeaderComponent} from "./components/HeaderComponent/HeaderComponent";
 import {Blog} from "./components/BlogComponent/BlogComponent";
 import {Portfolio} from  './components/Portfolio/Portfolio';
 import {Contact} from './components/ContactComponent/ContactComponent';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,6 +15,7 @@ import {
 } from "react-router-dom";
 
 function App() {
+  const reload = () => window.location.reload();
   return (
     <div className="App">
       <Router>
@@ -26,7 +28,7 @@ function App() {
           <Route path="/blog">
             <Blog />
           </Route>
-          <Route path="/portfolio">
+          <Route path="/portfolio.html" onEnter={reload}>
             <Portfolio />
           </Route>
           <Route path="/contact">

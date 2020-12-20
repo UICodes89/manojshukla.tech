@@ -9,3 +9,8 @@
     overflow: hidden;
     position: relative;
 }
+
+p {
+    color: #fff;
+    position: relative;
+}
