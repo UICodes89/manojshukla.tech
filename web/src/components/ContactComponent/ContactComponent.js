@@ -15,6 +15,11 @@ function Contact(props) {
     const messageHandler = (event) =>{
         setMessage(event.target.value);
     }
+    const resetForm = () => {
+        setName('');
+        setEmail('');
+        setMessage('');
+    }
     const encode  =  (data) => {
         return Object.keys(data)
             .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -28,7 +33,10 @@ function Contact(props) {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "contact", ...{name, email, message} })
           })
-            .then(() => alert("Success!"))
+            .then(() => {
+                alert("Success!")
+
+            })
             .catch(error => alert(error));
     }
     return (
@@ -36,7 +44,7 @@ function Contact(props) {
         <section id="contact">
             <h1 className="section-header">CONTACT</h1>
             <div className="contact-wrapper">
-                <form className="form-horizontal"  name="contact" method="POST" data-netlify="true" onSubmit={submiHandler}>
+                <form className="form-horizontal"  name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" onSubmit={submiHandler}>
                     <div className="form-group">
                         <div className="col-sm-12">
                            <div className="row">
