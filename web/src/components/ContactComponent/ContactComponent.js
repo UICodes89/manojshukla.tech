@@ -47,7 +47,7 @@ function Contact(props) {
                     <div className="form-group">
                         <div className="col-sm-12">
                             <div className="row">
-                            <input type="email" className="form-control" id="email" placeholder="EMAIL" name="email" value="" name="name" value={email} onChange={emailHandler}/>
+                            <input type="email" className="form-control" id="email" placeholder="EMAIL" name="email" value={email} onChange={emailHandler}/>
                             </div>
                         </div>
                     </div>
