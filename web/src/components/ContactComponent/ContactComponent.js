@@ -35,7 +35,7 @@ function Contact(props) {
           })
             .then(() => {
                 alert("Success!")
-
+                resetForm();
             })
             .catch(error => alert(error));
     }
